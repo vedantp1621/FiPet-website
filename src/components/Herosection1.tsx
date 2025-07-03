@@ -1,0 +1,66 @@
+'use client';
+import React, { useEffect, useState } from 'react';
+import Image from 'next/image';
+
+const Herosection1: React.FC = () => {
+  const RotatingText = () => {
+    const texts = ['Gamified.', 'For Teens.', 'Made Easy.'];
+    const [index, setIndex] = useState(0);
+
+    useEffect(() => {
+      const interval = setInterval(() => {
+        setIndex((prev) => (prev + 1) % texts.length);
+      }, 2000);
+      return () => clearInterval(interval);
+    }, []);
+
+    return (
+      <span className="text-[#FFF8EC] inline-block whitespace-nowrap transition-opacity duration-500 ease-in-out">
+        {texts[index]}
+      </span>
+    );
+  };
+
+  return (
+    <div className="w-full  sm:px-20 sm:py-30 bg-[#FFF8ECBF]">
+      <section className="relative min-h-[522px] sm:min-h-[622px] px-4 sm:px-8 py-10 sm:py-16 bg-gradient-to-r from-[#BB48FD] to-[#0A61E4] rounded-[20px] sm:rounded-[30px] shadow-inner">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-10 mt-10 px-10 ">
+          
+          {/* Left Text Content */}
+          <div className="text-white text-center lg:text-left">
+            <h1 className="text-[36px] sm:text-[48px] lg:text-[100px] font-poppins font-semibold leading-tight text-shadow-purple">
+              <span className="text-[#FF8F33]">Finance.</span><br />
+              <RotatingText />
+            </h1>
+            <p className="text-base sm:text-lg md:text-2xl mt-4 max-w-md mx-auto lg:mx-0">
+              The fun, effective way teens learn about finance.
+            </p>
+
+            <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 mt-6">
+              <button className="h-[41px] w-full sm:w-[180px] text-white font-medium py-2 px-6 rounded-full text-center glass-button">
+                Join the Waitlist
+              </button>
+              <button className="h-[41px] w-full sm:w-[180px] text-white font-medium py-2 px-6 rounded-full text-center glass-button">
+                Explore
+              </button>
+            </div>
+          </div>
+
+         {/* Right 3D-Icon Image */}
+<div className="relative w-[280px] sm:w-[350px] md:w-[420px] lg:w-[528px] h-[260px] sm:h-[320px] md:h-[380px] lg:h-[406px] lg:-top-[0px] lg:left-[0px]">
+  <Image
+    src="/3dicon.png"
+    alt="FiPet 3D-Icon"
+    fill
+    className="object-contain"
+    priority
+  />
+</div>
+
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default Herosection1;
