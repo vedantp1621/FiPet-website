@@ -10,7 +10,7 @@ export default function RootLayout({
     <html>
       <body>
         <Navbar />
-        <main>{children}</main>
+        <main className="mt-17">{children}</main>
         <MobileFooter />
       </body>
     </html>
