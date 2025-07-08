@@ -8,14 +8,14 @@ const Navbar : React.FC = () => {
   
 
   return (
-    <nav className="fixed w-full top-0 z-50 sm:bg-[#FFF8ECBF] ">
-      <div className="flex justify-between items-center py-4 px-6 md:px-12 sm:shadow-[inset_0_-4px_12px_#ffffff8c,_inset_0_8px_13px_#ffffffbf] backdrop-blur-[34px]">
+    <nav className="fixed w-full top-0 z-50 bg-[#FFF8ECBF] ">
+      <div className="flex justify-between items-center py-4 px-6 md:px-12 shadow-[inset_0_-4px_12px_#ffffff8c,_inset_0_8px_13px_#ffffffbf] backdrop-blur-[34px]">
         {/* Left side */}
         <div className="flex items-center gap-4">
           {/* Hamburger for Mobile */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden text-white sm:text-purple-500 text-2xl"
+            className="md:hidden text-purple-500 text-2xl"
           >
             {mobileOpen ? '✖' : '☰'}
           </button>
@@ -43,7 +43,7 @@ const Navbar : React.FC = () => {
         </div>
 
         {/* Right side: Join Button (always visible) */}
-        <div className="text-white sm:text-purple-500 capitalize text-[16px]">
+        <div className="text-purple-500 capitalize text-[16px]">
          <Link href="https://tally.so/r/mB5ex4" target="_blank" rel="noopener noreferrer">
             Join the waitlist!
           </Link>
@@ -55,7 +55,7 @@ const Navbar : React.FC = () => {
   <div className='md:hidden absolute'>
 
 
-  <div className="  flex flex-col px-6 py-4 space-y-4 text-white text-[16px] capitalize  rounded-xl z-40  backdrop-blur-[34px]">
+  <div className="  flex flex-col px-6 py-4 space-y-4 text-purple-500 text-[16px] capitalize  rounded-xl z-40  backdrop-blur-[34px]">
     <Link href="/" onClick={() => setMobileOpen(false)}>Discover</Link>
     <Link href="/about" onClick={() => setMobileOpen(false)}>About</Link>
     <Link href="/team" onClick={() => setMobileOpen(false)}>Team</Link>
