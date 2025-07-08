@@ -46,8 +46,8 @@ body {
 
   box-shadow: inset 1.22px 1.13px 4.62px rgba(255, 255, 255, 0.125),
     inset 2.15px 2px 9.24px rgba(255, 255, 255, 0.125),
-    -1.86px -1.73px 12px -8px rgba(0, 0, 0, 0.15),
-    -11.15px -10.39px 48px -12px rgba(0, 0, 0, 0.15);
+    1.86px 1.73px 12px -8px rgba(0, 0, 0, 0.75),
+    11.15px 10.39px 48px -12px rgba(0, 0, 0, 0.75);
 }
 
 /* Utilities layer: your custom classes */

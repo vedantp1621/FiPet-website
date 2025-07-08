@@ -63,14 +63,16 @@ const Herosection1: React.FC = () => {
                 The fun, effective way teens learn about finance.
               </p>
 
-              <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 mt-6">
-                <button className="h-[41px] w-full sm:w-[180px] text-white font-medium py-2 px-6 rounded-full glass-button">
-                  Join the Waitlist
-                </button>
-                <button className="h-[41px] w-full sm:w-[180px] text-white font-medium py-2 px-6 rounded-full glass-button">
-                  Explore
-                </button>
-              </div>
+              <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 mt-6  ">
+                <div></div>
+  <button className="h-[41px] w-full sm:w-[189px] md:w-[255px] text-white font-medium py-2 px-6 rounded-full glass-button  ">
+    Join the Waitlist
+  </button>
+  <button className="h-[41px] w-full sm:w-[189px] md:w-[255px] text-white font-medium py-2 px-6 rounded-full glass-button ">
+    Explore
+  </button>
+</div>
+
             </div>
           </div>
         </section>
@@ -112,7 +114,7 @@ const Herosection1: React.FC = () => {
 
         {/* Overlapping Phone Image - Behind Text */}
         <div className="absolute top-75 xl:top-30 z-0
-                        sm:right-1/2 sm:translate-x-1/2 lg:right-[25px] lg:translate-x-0  ">
+                        sm:right-1/2 sm:translate-x-1/2  lg:right-[20px]  lg:translate-x-0  ">
           <div className="relative 
                       
                          sm:w-[280px] sm:h-[460px] 
