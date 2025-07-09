@@ -12,6 +12,18 @@ const Navbar : React.FC = () => {
       <div className="flex justify-between items-center px-6 md:px-12 h-[65px]">
         {/* Left side */}
         <div className="flex items-center gap-4">
+           {/* Logo for Mobile */}
+          <div className="md:hidden">
+            <Link href="/">
+              <Image
+                src="/logo.png"
+                alt="FiPet Logo"
+                width={122}
+                height={57}
+                className="object-contain"
+              />
+            </Link>
+          </div>
           {/* Hamburger for Mobile */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
@@ -19,6 +31,8 @@ const Navbar : React.FC = () => {
           >
             {mobileOpen ? '✖' : '☰'}
           </button>
+
+          
 
           {/* Logo for Desktop */}
           <div className="hidden md:block">
@@ -51,10 +65,10 @@ const Navbar : React.FC = () => {
 
       {/* Mobile Dropdown Menu */}
 {mobileOpen && (
-  <div className='md:hidden absolute'>
+  <div className='md:hidden  w-full'>
 
 
-  <div className="  flex flex-col px-6 py-4 space-y-4 text-[#8F48FD] text-[16px] capitalize  rounded-xl z-40  backdrop-blur-[34px]">
+  <div className="  flex flex-col px-6 py-4 space-y-4 text-[#8F48FD] text-[16px] capitalize   z-40  ">
     <Link href="/" onClick={() => setMobileOpen(false)}>Discover</Link>
     <Link href="/team" onClick={() => setMobileOpen(false)}>Team</Link>
     <Link href="/contact" onClick={() => setMobileOpen(false)}>Contact Us</Link>
