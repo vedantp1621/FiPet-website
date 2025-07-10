@@ -26,20 +26,20 @@ body {
   color: var(--foreground);
   font-family: "Poppins", sans-serif;
 }
+
 .text-shadow-purple {
   text-shadow: 0px 4px 4px #7a40d8;
 }
+
 .glass-button {
   position: relative;
-  border-image-source: conic-gradient(
-    from 90deg at 0% 0%,
-    rgba(255, 255, 255, 0) -47.02deg,
-    rgba(255, 255, 255, 0.352) 42.98deg,
-    rgba(255, 255, 255, 0) 132.98deg,
-    rgba(255, 255, 255, 0.352) 222.98deg,
-    rgba(255, 255, 255, 0) 312.98deg,
-    rgba(255, 255, 255, 0.352) 402.98deg
-  );
+  border-image-source: conic-gradient(from 90deg at 0% 0%,
+      rgba(255, 255, 255, 0) -47.02deg,
+      rgba(255, 255, 255, 0.352) 42.98deg,
+      rgba(255, 255, 255, 0) 132.98deg,
+      rgba(255, 255, 255, 0.352) 222.98deg,
+      rgba(255, 255, 255, 0) 312.98deg,
+      rgba(255, 255, 255, 0.352) 402.98deg);
   border-image-slice: 1;
   backdrop-filter: blur(15.16px);
   -webkit-backdrop-filter: blur(15.16px);
@@ -53,8 +53,21 @@ body {
 /* Utilities layer: your custom classes */
 @layer utilities {
   .bg-background {
-    background-color: #fff8ec;
+    /* background-color: #fff8ec; */
+    background: linear-gradient(90deg, #BB48FD 0%, #0A61E4 100%);
+
   }
+
+  .footer_text_color1 {
+    /* color: linear-gradient(90deg, #F97216 0%, #F99F16 100%); */
+    background: linear-gradient(90deg, #F97216 0%, #F99F16 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+  }
+
+
 
   .gradient-text {
     background: linear-gradient(90deg, #bb48fd, #0a61e4);
