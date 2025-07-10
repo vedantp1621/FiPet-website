@@ -29,17 +29,14 @@ export default function TeamPage() {
             </div>
           ))}
         </div>
-
+        
+        <div className="flex justify-center my-6 mt-16 sm:hidden">
+          <div className="w-3/4 h-3 bg-[#EDEDED] rounded-full shadow-md "></div>
+        </div>
+        
         <div className="hidden sm:block">
           <CorpSocialLinks />
         </div>
-        {/* <div className="hidden sm:block">
-          <h6 className="text-3xl font-bold mt-8 mb-4">More than just work.</h6>
-          <div className="text-3xl font-bold text-gradient-orange my-4">
-            <h6>Although we&apos;re working hard to build the</h6>
-            <h6>future of finance learning</h6>
-          </div>
-        </div> */}
       </div>
     </div>
   );
