@@ -3,6 +3,20 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
 const Herosection1: React.FC = () => {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Calculate shadow opacity based on scroll position
+  const shadowOpacity = Math.max(0, 1 - scrollY / 200);
+
   const RotatingText = () => {
     const texts = ["Gamified.", "For Teens.", "Made Easy."];
     const [index, setIndex] = useState(0);
@@ -53,12 +67,37 @@ const Herosection1: React.FC = () => {
 
               {/* Buttons */}
               <div className="flex sm:flex-row justify-center lg:justify-start gap-4 mt-6">
-                <button className="w-[148px] h-[45px] sm:w-[189px] sm:h-auto md:w-[255px] text-white font-medium py-2 px-6 rounded-[20px] sm:rounded-full glass-button flex items-center justify-center">
-                  Explore
-                </button>
-                <button className="w-[148px] h-[45px] sm:w-[189px] sm:h-auto md:w-[255px] text-white font-medium py-2 px-6 rounded-[20px] sm:rounded-full glass-button flex items-center justify-center ">
-                  Join the Waitlist
-                </button>
+                <div className="relative">
+                  {/* Shadow overlay - behind the button */}
+                  <div 
+                    className="absolute inset-0 rounded-[20px] sm:rounded-full pointer-events-none z-0"
+                    style={{
+                      background: `radial-gradient(circle at center, rgba(0, 0, 0, ${shadowOpacity * 0.4}) 0%, rgba(0, 0, 0, ${shadowOpacity * 0.2}) 30%, rgba(0, 0, 0, ${shadowOpacity * 0.2}) 60%, transparent 85%)`,
+                      opacity: shadowOpacity,
+                      transition: 'opacity 0.1s ease-out',
+                      filter: 'blur(12px)'
+                    }}
+                  />
+                  <button className="relative z-10 w-[148px] h-[45px] sm:w-[189px] sm:h-auto md:w-[255px] text-white font-medium py-2 px-6 rounded-[20px] sm:rounded-full glass-button flex items-center justify-center">
+                    Explore
+                  </button>
+                </div>
+                <div className="relative">
+                  {/* Shadow overlay - behind the button */}
+                  <div 
+                    className="absolute inset-0 rounded-[20px] sm:rounded-full pointer-events-none z-0"
+                    style={{
+                      background: `radial-gradient(circle at center, rgba(0, 0, 0, ${shadowOpacity * 0.4}) 0%, rgba(0, 0, 0, ${shadowOpacity * 0.2}) 30%, rgba(0, 0, 0, ${shadowOpacity * 0.2}) 60%, transparent 85%)`,
+                      opacity: shadowOpacity,
+                      transition: 'opacity 0.1s ease-out',
+                      filter: 'blur(12px)'
+                    }}
+                  />
+                  <button className="relative z-10 w-[148px] h-[45px] sm:w-[189px] sm:h-auto md:w-[255px] text-white font-medium py-2 px-6 rounded-[20px] sm:rounded-full glass-button flex items-center justify-center">
+                    <span className="sm:hidden">Join Waitlist</span>
+  <span className="hidden sm:inline">Join the Waitlist</span>
+                  </button>
+                </div>
               </div>
 
               {/* Mobile Arrow */}
