@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 
 const Herosection2: React.FC = () => {
   const imgWidth = 600;
