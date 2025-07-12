@@ -7,7 +7,7 @@ import CorpSocialLinks from "./components/corp-social-links";
 
 export default function TeamPage() {
   return (
-    <div className={`${styles.customBg} ${styles.grayText} py-8 mt-16`}>
+    <div className={`${styles.customBg} ${styles.grayText} py-8 pt-20`}>
       <div className="w-full max-w-6xl mx-auto px-4">
         <h1 className="text-6xl font-bold py-4">We&apos;re shaping the way teens learn finance.</h1>
         <h6 className="text-3xl font-bold text-gradient-orange py-4">And we have fun doing it ;)</h6>
