@@ -6,7 +6,7 @@ import Link from "next/link";
 const Herosection1: React.FC = () => {
   const [scrollY, setScrollY] = useState(0);
 
-  useEffect(() => {
+  useEffect(() => { 
     const handleScroll = () => {
       setScrollY(window.scrollY);
     };
